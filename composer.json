@@ -1,0 +1,28 @@
+{
+    "name": "albeertito7/php-bootstrap",
+    "description": "PHP Bootstrap template",
+    "type": "project",
+    "require": {
+        "php": "^7.4"
+    },
+    "require-dev": {
+        "php-parallel-lint/php-parallel-lint": "^1.3",
+        "php-parallel-lint/php-console-highlighter": "^1.0",
+        "squizlabs/php_codesniffer": "^3.7",
+        "phpunit/phpunit": "^9.5",
+        "symfony/var-dumper": "^5.4",
+        "composer/semver": "^3.3"
+    },
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Albeertito7\\PhpBootstrap\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "albeertito7",
+            "email": "albertperezdatsira@gmail.com"
+        }
+    ]
+}
