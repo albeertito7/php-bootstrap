@@ -1,0 +1,23 @@
+# travis can manage integrations for many languages
+# in this case PHP
+language: php
+
+# PHP version
+php:
+  - 7.4
+
+# the cached directories to manage
+cache:
+  directories:
+    #- node_modules
+    - vendor
+
+# install all requirements
+# in this case the 'composer'
+before_script:
+  - composer install --no-interaction
+
+# verify the code is correct and passes all the tests if TDD
+script:
+  - composer phpcs-auto-check-project
+  - composer phpunit
