@@ -1,8 +1,5 @@
 # php-bootstrap
-[![Software License][ico-license]][link-license]
-[![Quality Score][ico-code-quality]][link-code-quality]
 
-## Introduction
 This is a repository intended to serve as a starting point for bootstrap a project in PHP.
 The idea is that you don't have to worry about the boilerplate.
 
