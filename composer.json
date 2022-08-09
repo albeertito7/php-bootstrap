@@ -1,7 +1,23 @@
 {
     "name": "albeertito7/php-bootstrap",
+    "version": "0.1.0",
     "description": "PHP Bootstrap template",
     "type": "project",
+    "keywords": [
+        "bootstrap",
+        "skeleton",
+        "php",
+        "bolerplate",
+        "TDD"
+    ],
+    "authors": [
+        {
+            "name": "Albert Pérez Datsira",
+            "email": "albertperezdatsira@gmail.com",
+            "homepage": "https://albeertito7.github.io",
+            "role": "Developer"
+        }
+    ],
     "require": {
         "php": "^7.4"
     },
@@ -19,10 +35,9 @@
             "Albeertito7\\PhpBootstrap\\": "src/"
         }
     },
-    "authors": [
-        {
-            "name": "albeertito7",
-            "email": "albertperezdatsira@gmail.com"
+    "autoload-dev": {
+        "psr-4": {
+            "Albeertito7\\PhpBootstrapTest\\": "test/"
         }
-    ]
+    }
 }
