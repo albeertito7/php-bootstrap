@@ -3,6 +3,7 @@
     "version": "0.1.0",
     "description": "PHP Bootstrap template",
     "type": "project",
+    "license": "MIT",
     "keywords": [
         "bootstrap",
         "skeleton",
@@ -18,6 +19,16 @@
             "role": "Developer"
         }
     ],
+    "autoload": {
+        "psr-4": {
+            "Albeertito7\\PhpBootstrap\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Albeertito7\\PhpBootstrapTest\\": "tests/"
+        }
+    },
     "require": {
         "php": "^7.4"
     },
@@ -29,15 +40,9 @@
         "symfony/var-dumper": "^5.4",
         "composer/semver": "^3.3"
     },
-    "license": "MIT",
-    "autoload": {
-        "psr-4": {
-            "Albeertito7\\PhpBootstrap\\": "src/"
-        }
-    },
-    "autoload-dev": {
-        "psr-4": {
-            "Albeertito7\\PhpBootstrapTest\\": "tests/"
-        }
+    "scripts": {
+        "phpunit": "phpunit",
+        "phpunit-coverage-xml": "phpunit --stop-on-error --stop-on-failure --coverage-clover phpunit.coverage.xml",
+        "__comment": "generate a coverage report in the clover format writting at the phpunit.coverage.xml outputfile"
     }
 }
