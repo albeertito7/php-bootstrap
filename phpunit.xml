@@ -2,15 +2,28 @@
 <phpunit
         bootstrap="vendor/autoload.php"
         colors="true"
+        cacheResultFile=".phpunit.cache/test-results"
         beStrictAboutChangesToGlobalState="true"
         beStrictAboutTestsThatDoNotTestAnything="true"
         beStrictAboutOutputDuringTests="true"
-        enforceTimeLimit="true">
+        beStrictAboutTodoAnnotatedTests="true"
+        beStrictAboutCoversAnnotation="false"
+        forceCoversAnnotation="false"
+        verbose="true"
+        failOnRisky="true"
+        failOnWarning="true">
     <testsuites>
         <testsuite name="Tests">
             <directory>tests</directory>
         </testsuite>
     </testsuites>
+
+    <coverage cacheDirectory=".phpunit.cache/code-coverage"
+              processUncoveredFiles="true">
+        <include>
+            <directory suffix=".php">src</directory>
+        </include>
+    </coverage>
 </phpunit>
 
 <!--
