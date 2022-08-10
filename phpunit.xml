@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit
+        bootstrap="vendor/autoload.php"
+        colors="true"
+        beStrictAboutChangesToGlobalState="true"
+        beStrictAboutTestsThatDoNotTestAnything="true"
+        beStrictAboutOutputDuringTests="true"
+        enforceTimeLimit="true">
+    <testsuites>
+        <testsuite name="Tests">
+            <directory>tests</directory>
+        </testsuite>
+    </testsuites>
+</phpunit>
+
+<!--
+ PHP Unit Configuration XML File
+
+ ** brief description of the main elements **
+
+ <phpunit> :
+    - main element
+    - attributes :
+        - bootstrap: configures the bootstrap script that is loaded before the tests are executed. This script usually only registers the autoloader callback that is used to load the code under test.
+        - colors: configures whether colors are used in PHPUnit's output.
+        - beStrictAboutChangesToGlobalState: configures whether PHPUnit should mark a test as risky when global state is manipulated by the code under test (or the test code).
+        - beStrictAboutOutputDuringTests: configures whether PHPUnit should mark a test as risky when the code under test (or the test code) prints output.
+        - beStrictAboutTestsThatDoNotTestAnything: configures whether PHPUnit should mark a test as risky when no assertions are performed (expectations are also considered).
+        - enforceTimeLimit: configures whether time limits should be enforced.
+        ...
+
+<testsuite> :
+    - must have a "name" attribute and may have one or more "<directory>" and/or "<file>" child elements.
+    - indicates where should be searched for tests.
+
+    <testsuites>
+        <testsuite name="unit">
+            <directory>tests/unit</directory>
+        </testsuite>
+        <testsuite name="integration">
+            <directory>tests/integration</directory>
+        </testsuite>
+        <testsuite name="edge-to-edge">
+            <directory phpVersion="8.0.0" phpVersionOperator=">=" >test/edge-to-edge</directory>
+        </testsuite>
+    </testsuites>
+
+    - using the attributes "phpversion" and "phpVersionOperator", a required PHP version can be specified.
+
+<php> :
+    - can be used to configure PHP settings, constants, and global variables. It can also be used to prepend the "include_path".
+
+** for more information visit the official phpunit XML docs **
+** https://phpunit.readthedocs.io/en/9.5/configuration.html **
+
+ -->
